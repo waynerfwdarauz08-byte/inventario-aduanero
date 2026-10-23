@@ -1,0 +1,11 @@
+import * as service from '../services/inventoryService.js';
+import { ask } from '../services/chatService.js';
+import { read } from '../config/database.js';
+import * as validate from '../validators/query.js';
+export const health=async(req,res)=>{await read('SELECT 1 conectado');res.json({success:true,data:{api:'ok',database:'ok'}});};
+export const dashboard=async(req,res)=>res.json({success:true,data:await service.dashboard()});
+export const catalogos=async(req,res)=>res.json({success:true,data:await service.catalogos()});
+export const list=(name)=>async(req,res)=>res.json({success:true,...await service.list(name,validate.query(req.query,name))});
+export const detail=async(req,res)=>res.json({success:true,data:await service.detail(validate.id(req.params.id))});
+export const bodega=async(req,res)=>res.json({success:true,...await service.bodega(validate.id(req.params.id),validate.query(req.query,'inventario'))});
+export const chat=async(req,res)=>res.json({success:true,data:await ask(validate.chat(req.body))});

@@ -1,0 +1,3 @@
+import QueryPage from '../components/common/QueryPage.jsx';
+import {inventoryColumns} from '../components/inventario/columns.jsx';
+export default function InventarioPage(){return <QueryPage title="Inventario" description="Consulte las existencias actuales por producto, lote y bodega." resource="inventario" columns={inventoryColumns} notice="El stock ya refleja los movimientos. Una autorización de liberación no implica una salida de bodega." filters={[{key:'producto',label:'Producto',catalog:'productos'},{key:'bodega',label:'Bodega',catalog:'bodegas'},{key:'pais',label:'País',catalog:'paises'},{key:'estado',label:'Estado del lote',options:['Retenido','En revision','Liberado']},{key:'disponibilidad',label:'Disponibilidad',options:['con-stock','sin-stock']}]}/>;}

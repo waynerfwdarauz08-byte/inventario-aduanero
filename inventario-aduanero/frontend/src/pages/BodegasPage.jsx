@@ -1,0 +1,4 @@
+import {Link} from 'react-router-dom';
+import QueryPage from '../components/common/QueryPage.jsx';
+import {number} from '../utils/format.js';
+export default function BodegasPage(){return <QueryPage title="Bodegas" description="Ubicaciones de almacenamiento y productos asociados." resource="bodegas" notice="La capacidad es nominal. No se calcula ocupación porque no se dispone del volumen por producto." columns={[{key:'nombre',label:'Bodega',sort:'nombre'},{key:'ubicacion',label:'Ubicación'},{key:'capacidad_m3',label:'Capacidad (m³)',sort:'capacidad',render:r=>number(r.capacidad_m3)},{key:'lotes',label:'Lotes registrados'},{key:'productos_con_stock',label:'Productos con stock'},{key:'consulta',label:'Consulta',render:r=><Link className="table-link" to={'/inventario?bodega='+r.id_bodega}>Ver lotes y productos ↗</Link>}]}/>;}

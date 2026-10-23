@@ -1,0 +1,3 @@
+import QueryPage from '../components/common/QueryPage.jsx';
+import {declarationColumns} from '../components/declaraciones/columns.jsx';
+export default function DeclaracionesPage(){return <QueryPage title="Declaraciones" description="Consulte los trámites y acceda a su información relacionada." resource="declaraciones" columns={declarationColumns} filters={[{key:'desde',label:'Desde',type:'date'},{key:'hasta',label:'Hasta',type:'date'},{key:'regimen',label:'Régimen',options:['Importacion','Exportacion','Transito','Deposito']},{key:'estado',label:'Estado aduanero',options:['Retenida','En revision','Liberada','Rechazada']},{key:'empresa',label:'Empresa',catalog:'empresas'}]}/>;}

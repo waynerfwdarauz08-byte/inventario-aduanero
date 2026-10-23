@@ -1,0 +1,3 @@
+import QueryPage from '../components/common/QueryPage.jsx';
+import {inspectionColumns} from '../components/inspecciones/columns.jsx';
+export default function InspeccionesPage(){return <QueryPage title="Inspecciones" description="Resultados de revisión, observaciones y funcionarios responsables." resource="inspecciones" columns={inspectionColumns} filters={[{key:'resultado',label:'Resultado',options:['Sin observaciones','Con observaciones','No conforme']},{key:'funcionario',label:'Funcionario',catalog:'funcionarios'},{key:'desde',label:'Desde',type:'date'},{key:'hasta',label:'Hasta',type:'date'}]}/>;}

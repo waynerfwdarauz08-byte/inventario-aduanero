@@ -1,0 +1,27 @@
+# Configuración privada y credenciales locales
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.aws/
+.codex/
+.agents/
+
+# Dependencias y archivos generados
+node_modules/
+dist/
+.npm-cache/
+*.log
+test-results/
+coverage/
+
+# Script privado de creación del usuario y capturas con posibles credenciales
+/Aduana_Lab3.sql
+/Villalobos_Wayner_Evidencia_Lab3.pdf
+
+# Archivos temporales del sistema y editor
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak

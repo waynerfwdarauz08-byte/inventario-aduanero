@@ -1,0 +1,1 @@
+export default function StatusBadge({value}){const tone=/Reten|No conforme|Rechazada/.test(value)?'danger':/revision|Con observaciones/.test(value)?'warning':/Liberad|Sin observaciones/.test(value)?'success':'neutral';return <span className={'badge '+tone}><span/>{value}</span>;}

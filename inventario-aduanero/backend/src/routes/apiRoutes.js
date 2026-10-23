@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import { rateLimit } from 'express-rate-limit';
+import * as controller from '../controllers/apiController.js';
+const router=Router();
+router.get('/health',controller.health);
+router.get('/dashboard',controller.dashboard);
+router.get('/catalogos',controller.catalogos);
+for(const name of ['inventario','declaraciones','contenedores','bodegas','inspecciones','movimientos']) router.get('/'+name,controller.list(name));
+router.get('/declaraciones/:id',controller.detail);
+router.get('/bodegas/:id/inventario',controller.bodega);
+router.post('/chat',rateLimit({windowMs:60000,limit:12,standardHeaders:'draft-8',legacyHeaders:false,message:{success:false,error:'Demasiadas preguntas. Espere un minuto.'}}),controller.chat);
+export default router;
