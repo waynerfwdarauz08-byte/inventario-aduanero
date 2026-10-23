@@ -16,9 +16,8 @@ dist/
 test-results/
 coverage/
 
-# Script privado de creación del usuario y capturas con posibles credenciales
+# Script privado de creación del usuario
 /Aduana_Lab3.sql
-/Villalobos_Wayner_Evidencia_Lab3.pdf
 
 # Archivos temporales del sistema y editor
 .DS_Store

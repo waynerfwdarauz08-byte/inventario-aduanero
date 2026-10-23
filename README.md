@@ -30,8 +30,9 @@ Abra http://127.0.0.1:5173. La API usa el puerto 3001; n8n se administra por sep
 - `Villalobos_Wayner_Aduana_Lab3.sql`: esquema y datos educativos originales de referencia.
 - `Agente IA - Inventario Aduanero.json`: workflow original exportado, con referencias a credenciales de n8n, sin contraseñas ni API keys incrustadas. Deben seleccionarse credenciales propias al importar.
 - Investigación académica y diagrama de relaciones del laboratorio.
+- [Evidencias del agente de IA](Villalobos_Wayner_Evidencia_Lab3.pdf): capturas de las ocho preguntas del laboratorio.
 
-**La base ya existe: no vuelva a ejecutar el script SQL para iniciar la página.** No se incluyen contraseñas, archivos `.env`, dependencias instaladas, builds ni evidencias que puedan mostrar credenciales. La aplicación es exclusivamente local, sin autenticación ni operaciones de escritura.
+**La base ya existe: no vuelva a ejecutar el script SQL para iniciar la página.** No se incluyen contraseñas, archivos `.env`, dependencias instaladas ni builds. La aplicación es exclusivamente local, sin autenticación ni operaciones de escritura.
 
 ## Comprobaciones
 
